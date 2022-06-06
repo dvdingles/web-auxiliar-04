@@ -1,0 +1,288 @@
+/*
+    Estilos generales para que las etiquetas no contengan propiedades
+    que nos estorben y en todos los navegadores se vean correctamente
+*/
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200&display=swap");
+@import url(//db.onlinewebfonts.com/c/457055c70a9c98aa64002f05d6652edc?family=ITC+Eras);
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  vertical-align: baseline;
+}
+
+img {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center center;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  font-size: inherit;
+}
+
+video {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center center;
+}
+
+p a {
+  display: inline;
+}
+
+li {
+  list-style-type: none;
+}
+
+table, tr, td {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6, strong {
+  hyphens: auto;
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+::selection {
+  background-color: var(--auxiliar2);
+  color: var(--blanco);
+}
+
+form, input, textarea, select, button {
+  font-family: inherit;
+  font-size: inherit;
+  hyphens: auto;
+  background-color: transparent;
+  display: block;
+}
+
+body {
+  font-family: var(--tipo-terciaria);
+  font-size: 100%;
+  line-height: 1.4em;
+  min-height: 100vh;
+  background-color: var(--blanco);
+  color: var(--negro);
+  hyphens: auto;
+  font-smooth: always;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  --negro: rgb(39, 39, 39);
+  --blanco: rgb(222,222,222);
+  --sombra1: rgba(111,111,111,.2);
+  --sombra2: rgba(255,255,255,1);
+  --auxiliar1: #DFAC12;
+  --auxAmarillo: rgba(223,173,16,.2);
+  --auxiliar2: #00814A;
+  --marcado: rgb(rgb(0, 204, 255));
+  --tipo-principal: Helvetica, Arial, sans-serif;
+  --tipo-secundaria: "Open Sans", sans-serif;
+  --tipo-terciaria: "Roboto", sans-serif;
+  --tipo-erasdemi: "ITC Eras";
+}
+@font-face {
+  :root {
+    font-family: "ITC Eras Demi";
+    src: url("public/tipografias/ITC Eras Demi/ITC Eras Demi.ttf");
+  }
+}
+
+body {
+  position: relative;
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+  place-items: center;
+  padding-top: 5%;
+}
+body .titulo {
+  border-radius: 9px;
+  transition: all 0.5s ease;
+  background-color: var(--blanco);
+  box-shadow: 1em 1em 2em var(--sombra1), 0.5em 0.5em 1em var(--auxAmarillo), -1em -1em 2em var(--sombra2), -0.5em -0.5em 1em var(--auxAmarillo), inset 0 0 0 transparent, inset 0 0 0 transparent;
+  width: 66%;
+  height: 66px;
+  display: grid;
+  place-content: center;
+  margin-bottom: 11px;
+  border-top: 1px solid white;
+  border-left: 1px solid white;
+  border-right: 1px solid rgb(188, 188, 188);
+  border-bottom: 1px solid rgb(188, 188, 188);
+  cursor: pointer;
+}
+body .titulo:hover {
+  filter: brightness(1.2);
+}
+body .titulo h1 {
+  font-family: var(--tipo-erasdemi);
+  font-size: 1.5em;
+  color: var(--auxiliar1);
+}
+body .titulo:active ~ .nav .telefono {
+  animation: sion 1s ease-in-out infinite;
+}
+@keyframes sion {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+body .titulo:hover ~ .nav .telefono {
+  filter: brightness(1.2);
+}
+body .nav {
+  display: grid;
+  grid-template-rows: auto auto;
+  place-content: center;
+  place-items: center;
+}
+body .ul {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+body .ul .li {
+  background-image: linear-gradient(to right, var(--auxiliar1) 0%, var(--auxiliar2) 100%);
+  background-size: 1000%;
+  margin: 0.5em;
+  border-radius: 9px;
+  transition: background-position 0.5s ease-in-out;
+}
+body .ul .li:hover {
+  background-position: 50%;
+}
+body .ul .li:active {
+  filter: brightness(1.2);
+}
+body .ul .li .a {
+  padding: 9px;
+  color: white;
+  cursor: pointer;
+}
+body .telefono {
+  font-size: 1.5rem;
+  padding: 22px;
+  font-weight: 900;
+  color: var(--auxiliar2);
+}
+body .footer {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--negro);
+}
+body .footer a {
+  cursor: pointer;
+  color: var(--blanco);
+  font-size: 0.7em;
+}
+body .footer a:hover {
+  filter: brightness(2);
+}
+body .container {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid red;
+  backdrop-filter: blur(2px);
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease-in-out;
+}
+body .container .div-modal {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: var(--blanco);
+  overflow: auto;
+  padding: 55px;
+  border-radius: 22px;
+  display: flex;
+  justify-content: start;
+  align-items: flex-start;
+  width: 88%;
+  height: 66%;
+  backdrop-filter: blur(55px);
+  box-shadow: 1px 1px 44px 5px rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  line-height: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+body .container .div-modal transit .falso-boton {
+  border-radius: 5px;
+  width: 77px;
+  color: var(--auxiliar2);
+  font-size: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  background-color: var(--auxiliar1);
+  margin: 9px;
+}
+body .container .div-modal transit .falso-boton:hover {
+  filter: brightness(1.2);
+  box-shadow: 2px 2px 8px 2px rgba(0, 0, 0, 0.2);
+}
+body .container .div-modal::-webkit-scrollbar {
+  width: 11px;
+}
+body .container .div-modal::-webkit-scrollbar-thumb {
+  background-color: var(--auxiliar1);
+  border-radius: 5px;
+}
+body .container:target {
+  opacity: 1;
+  pointer-events: unset;
+}
+body .container:target .div-modal {
+  animation: matrix 0.5s ease-in-out;
+}
+@keyframes matrix {
+  from {
+    transform: scale(0.5);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+body .falso-boton {
+  color: var(--auxiliar2);
+}
+body .falso-boton:hover {
+  filter: brightness(2.2);
+}
+
+/*# sourceMappingURL=estilos.css.map */

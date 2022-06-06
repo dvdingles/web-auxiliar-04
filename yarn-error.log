@@ -1,0 +1,45 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\dvdin\.node\corepack\yarn\1.22.15\bin\yarn.js add -D @typescript-eslint/eslint-plugin@latest @typescript-eslint/parser@latest
+
+PATH: 
+  D:\_DIL\dev\web-junio\node_modules\.bin;D:\_DIL\dev\node_modules\.bin;D:\_DIL\node_modules\.bin;D:\node_modules\.bin;C:\Program Files\nodejs\node_modules\npm\node_modules\@npmcli\run-script\lib\node-gyp-bin;C:\Program Files\PowerShell\7;C:\Python310\Scripts\;C:\Python310\;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\Microsoft SQL Server\90\Tools\binn\;C:\Esko\Artios\Common\Program\;C:\Program Files\Common Files\Autodesk Shared\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\CMake\bin;C:\Git\cmd;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\PowerShell\7\;C:\Users\dvdin\scoop\shims;C:\Users\dvdin\AppData\Local\Microsoft\WindowsApps;C:\Users\dvdin\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\dvdin\AppData\Roaming\npm;C:\Users\dvdin\AppData\Local\npm-cache\_npx\7ef27be80482e586\node_modules\.bin
+
+Yarn version: 
+  1.22.15
+
+Node version: 
+  16.15.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: ENOENT: no such file or directory, copyfile 'C:\Users\dvdin\AppData\Local\Yarn\Cache\v6\npm-estraverse-4.3.0-398ad3f3c5a24948be7725e83d11a7de28cdbd1d-integrity\node_modules\estraverse\.jshintrc' -> 'D:\_DIL\dev\web-junio\node_modules\@typescript-eslint\utils\node_modules\estraverse\.jshintrc'
+
+npm manifest: 
+  {
+    "name": "web-junio",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+      "@typescript-eslint/eslint-plugin": "^5.27.0",
+      "@typescript-eslint/parser": "^5.27.0",
+      "eslint": "^7.32.0 || ^8.2.0",
+      "eslint-config-airbnb-base": "^15.0.0",
+      "eslint-plugin-import": "^2.25.2",
+      "sass": "1.52.2"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

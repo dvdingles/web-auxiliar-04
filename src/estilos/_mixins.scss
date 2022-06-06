@@ -1,0 +1,94 @@
+
+//=======PLANTILLA============================
+
+// @mixin neoMorfismo($estado: 1, $dist: 1em, $rd: 9px){
+
+//   border-radius       : $rd;
+//   transition          : all .5s ease;
+//   // color               : var(--negro);
+
+//     @if $estado == 1 {
+//       background-color: var(--blanco);
+//       box-shadow: 
+//                   $dist     $dist     $dist*2 var(--sombra1),
+//                   $dist*-1  $dist*-1  $dist*2 var(--sombra2),
+//                   inset 0 0 0 transparent,
+//                   inset 0 0 0 transparent;
+
+//     }@else if $estado == 2 {
+//       background-color: var(--negro);
+//       box-shadow: 
+//                   inset 0 0 0 transparent,
+//                   inset 0 0 0 transparent,
+//                   $dist     $dist     $dist*2 var(--sombra1),
+//                   $dist*-1  $dist*-1  $dist*2 var(--sombra2);
+
+
+//     }
+//   }
+
+  @mixin david(){
+    background-color: aqua;
+  }
+
+  @mixin neoMorfismo($estado: 1, $dist: 1em, $rd: 9px){
+
+    border-radius       : $rd;
+    transition          : all .5s ease;
+    // color               : var(--negro);
+  
+      @if $estado == 1 {
+        background-color: var(--blanco);
+        box-shadow: 
+                    $dist     $dist     $dist*2   var(--sombra1),
+                    $dist/2     $dist/2 $dist     var(--auxAmarillo),
+                    $dist*-1  $dist*-1  $dist*2   var(--sombra2),
+                    $dist/2*-1  $dist/2*-1  $dist var(--auxAmarillo),
+                    inset 0 0 0 transparent,
+                    inset 0 0 0 transparent;
+  
+      }@else if $estado == 2 {
+        background-color: var(--negro);
+        box-shadow: 
+                    inset 0 0 0 transparent,
+                    inset 0 0 0 transparent,
+                    $dist     $dist     $dist*2 var(--sombra1),
+                    $dist*-1  $dist*-1  $dist*2 var(--sombra2);
+  
+  
+      }
+    }
+  @mixin neoMorfismo2($estado: 1, $dist: 1em, $rd: 9px){
+
+    border-radius       : $rd;
+    transition          : all .5s ease;
+    // color               : var(--negro);
+  
+      @if $estado == 1 {
+        // background-color: var(--blanco);
+        background-color: rgba(255,255,255,.1);
+        backdrop-filter: blur(22px);
+        opacity: 1;
+        box-shadow: 
+                    $dist       $dist       $dist*6   rgb(0,0,0,.4),
+                    $dist/2     $dist/2     $dist     var(--sombra1),
+                    $dist*-1    $dist*-1    $dist*2   var(--sombra1),
+                    $dist/2*-1  $dist/2*-1  $dist     var(--sombra1),
+                    inset 0 0 0 transparent,
+                    inset 0 0 0 transparent;
+  
+      }@else if $estado == 2 {
+        background-color: var(--negro);
+        box-shadow: 
+                    inset 0 0 0 transparent,
+                    inset 0 0 0 transparent,
+                    $dist     $dist     $dist*2 var(--sombra1),
+                    $dist*-1  $dist*-1  $dist*2 var(--sombra2);
+  
+  
+      }
+    }
+  
+    @mixin david(){
+      background-color: aqua;
+    }
